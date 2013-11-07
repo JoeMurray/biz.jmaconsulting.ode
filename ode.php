@@ -89,7 +89,6 @@ function ode_civicrm_buildForm($formName, &$form) {
     $session = CRM_Core_Session::singleton();
     $contactID = $session->get('userID');
 
-    $form->_contactIds = array($contactID);
     $contactEmails = CRM_Core_BAO_Email::allEmails($contactID);
 
     $fromDisplayName = CRM_Core_DAO::getFieldValue('CRM_Contact_DAO_Contact',$contactID, 'display_name');
